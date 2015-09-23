@@ -11,10 +11,10 @@ namespace MarsIntervalCalculator
         public static string Check(MarsInterval intervalOne, MarsInterval intervalTwo)
         {
             //NESTED
-            if ((intervalOne.DateStart.MinuteFromZero < intervalTwo.DateStart.MinuteFromZero &&
-                intervalOne.DateEnd.MinuteFromZero > intervalTwo.DateEnd.MinuteFromZero) ||
-                (intervalTwo.DateStart.MinuteFromZero < intervalOne.DateStart.MinuteFromZero &&
-                intervalTwo.DateEnd.MinuteFromZero > intervalOne.DateEnd.MinuteFromZero))
+            if ((intervalOne.DateStart.MinuteFromZero <= intervalTwo.DateStart.MinuteFromZero &&
+                intervalOne.DateEnd.MinuteFromZero >= intervalTwo.DateEnd.MinuteFromZero) ||
+                (intervalTwo.DateStart.MinuteFromZero <= intervalOne.DateStart.MinuteFromZero &&
+                intervalTwo.DateEnd.MinuteFromZero >= intervalOne.DateEnd.MinuteFromZero))
             {
                 return "NESTED";
             }
@@ -25,14 +25,14 @@ namespace MarsIntervalCalculator
                (intervalTwo.DateStart.MinuteFromZero < intervalOne.DateStart.MinuteFromZero &&
                intervalTwo.DateEnd.MinuteFromZero < intervalOne.DateEnd.MinuteFromZero))
             {
-                return "NESTED";
+                return "OVERLAP";
             }
 
             //TOUCH
             if (intervalOne.DateEnd.MinuteFromZero == intervalTwo.DateStart.MinuteFromZero||
                 intervalTwo.DateEnd.MinuteFromZero == intervalOne.DateStart.MinuteFromZero)
             {
-                return "NESTED";
+                return "TOUCH";
             }
 
             //DISJOINT

@@ -5,6 +5,7 @@ using MarsIntervalCalculator;
 namespace MarsIntervalCalculatorUnitTest
 {
     [TestClass]
+    [Ignore]
     public class TestMarsDate
     {
         [TestMethod]
@@ -16,9 +17,19 @@ namespace MarsIntervalCalculatorUnitTest
         }
 
         [TestMethod]
-        public void HourMinus3_Minute70_Shall_be_valid_Date()
+        [ExpectedException(typeof(ArgumentException))]
+        public void HourMinus1_Minute70_Shall_be_an_invalid_Date()
         {
-            var date = MarsDate.Parse("-3", "00");
+            var date = MarsDate.Parse("-1", "00");
+            Assert.AreEqual(0, date.Hour);
+            Assert.AreEqual(0, date.Minute);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Hour24_Minute100_Shall_be_an_invalid_Date()
+        {
+            var date = MarsDate.Parse("24", "100");
             Assert.AreEqual(0, date.Hour);
             Assert.AreEqual(0, date.Minute);
         }
