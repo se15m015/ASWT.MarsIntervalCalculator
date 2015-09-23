@@ -42,7 +42,7 @@ namespace MarsIntervalCalculator
         public int CompareTo(MarsDate date)
         {
             if (MinuteFromZero < date.MinuteFromZero) {return -1;}
-            else if (MinuteFromZero > date.MinuteFromZero){ return -1;}
+            else if (MinuteFromZero > date.MinuteFromZero){ return 1;}
             else { return 0; }
             //if (_hour < date.Hour()) return -1;
             //if (_hour > date.Hour()) return 1;
