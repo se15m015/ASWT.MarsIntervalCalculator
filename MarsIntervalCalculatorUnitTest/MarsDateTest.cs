@@ -6,9 +6,8 @@ namespace MarsIntervalCalculatorUnitTest
 {
     [TestClass]
     [Ignore]
-    public class TestMarsDate
+    public class MarsDateTest
     {
-        [TestMethod]
         public void Hour00_Minute00_Shall_be_valid_Date()
         {
             var date = MarsDate.Parse("00", "00");
