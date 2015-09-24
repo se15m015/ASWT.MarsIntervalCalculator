@@ -4,7 +4,9 @@ using MarsIntervalCalculator;
 
 namespace MarsIntervalCalculatorUnitTest
 {
+ 
     [TestClass]
+    [Ignore]
     public class MarsIntervalTest
     {
         [TestMethod]

@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="MarsDate.cs" />
     <Compile Include="MarsInterval.cs" />
-    <Compile Include="MarsIntervalCalculator.cs" />
+    <Compile Include="MarsIntervalCalc.cs" />
     <Compile Include="MarsIntervalChecker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

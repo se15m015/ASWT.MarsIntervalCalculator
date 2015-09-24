@@ -55,6 +55,8 @@
     <Compile Include="MarsDateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MarsIntervalTest.cs" />
+    <Compile Include="DominikTest.cs" />
+    <Compile Include="ThomasTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarsIntervalCalculator\MarsIntervalCalculator.csproj">
